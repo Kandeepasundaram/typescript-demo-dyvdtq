@@ -8,11 +8,15 @@ let date = '' + dateVal;
 for (let i = 0; i < 2; i++) {
   let year = yearVal;
 
+  month = '' + monthVal;
+  date = '' + dateVal;
+
   if (i % 2 != 0 && monthVal < 10) {
     month = '0' + monthVal;
   }
 
   for (let j = 0; j < 2; j++) {
+    year = yearVal;
     if (j % 2 != 0 && dateVal < 10) {
       date = '0' + dateVal;
     }
