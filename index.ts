@@ -5,19 +5,19 @@ let arr: string[] = [];
 
 let month = '' + monthVal;
 let date = '' + dateVal;
-for (i = 0; i < 2; i++) {
+for (let i = 0; i < 2; i++) {
   let year = yearVal;
 
   if (i % 2 != 0 && monthVal < 10) {
     month = '0' + monthVal;
   }
 
-  for (j = 0; j < 2; j++) {
+  for (let j = 0; j < 2; j++) {
     if (j % 2 != 0 && dateVal < 10) {
       date = '0' + dateVal;
     }
 
-    for (k = 0; k < 2; k++) {
+    for (let k = 0; k < 2; k++) {
       if (k % 2 != 0 && year.length > 2) {
         console.log('slicing');
         year = yearVal.slice(-2);
@@ -30,9 +30,11 @@ for (i = 0; i < 2; i++) {
 }
 
 console.log(arr);
-console.log('size before removing duplicates: '  +arr.length)
+console.log('size before removing duplicates: ' + arr.length);
 let result = [...new Set(arr)];
 console.log(result);
-console.log('size after removing duplicates: '  +result.length)
+console.log('size after removing duplicates: ' + result.length);
 
-console.log('------------------------------------')
+console.log('------------------------------------');
+result.forEach((el) => console.log(el));
+console.log(result.join('|'));
